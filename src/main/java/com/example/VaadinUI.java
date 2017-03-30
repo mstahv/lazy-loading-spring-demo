@@ -25,6 +25,7 @@ public class VaadinUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         Grid<Person> grid = new Grid<>(Person.class);
+        //grid.setColumns("id", "firstName", "lastName");
         grid.setSizeFull();
 
         grid.setDataProvider(

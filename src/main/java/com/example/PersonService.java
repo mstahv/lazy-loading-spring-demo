@@ -21,6 +21,7 @@ public class PersonService {
     }
 
     public List<Person> findAll(int offset, int limit, Map<String, Boolean> sortOrders) {
+        System.err.println(String.format("Request: offset %s \t limit%s ", offset, limit));
         int page = offset / limit;
         List<Sort.Order> orders = sortOrders.entrySet().stream()
                 .map(e -> new Sort.Order(e.getValue() ? Sort.Direction.ASC : Sort.Direction.DESC, e.getKey()))
